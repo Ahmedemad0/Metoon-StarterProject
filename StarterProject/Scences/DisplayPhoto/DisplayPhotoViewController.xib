@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DisplayPhotoViewController" customModule="StarterProject" customModuleProvider="target">
+            <connections>
+                <outlet property="mainView" destination="i5M-Pr-FkT" id="cfU-Oy-1Gv"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT" customClass="DisplayPhotoView" customModule="StarterProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yDA-oz-nhS">
+                    <rect key="frame" x="0.0" y="94" width="393" height="724"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2T-JC-VgA">
+                    <rect key="frame" x="12" y="50" width="48" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="uTq-sE-PbJ"/>
+                        <constraint firstAttribute="width" constant="48" id="yTU-Lt-ofp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <imageReference key="image" image="arrow.backward" catalog="system" symbolScale="large"/>
+                    </state>
+                    <connections>
+                        <action selector="backPressed:" destination="i5M-Pr-FkT" eventType="touchUpInside" id="Ezj-vB-tOu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="yDA-oz-nhS" firstAttribute="top" secondItem="V2T-JC-VgA" secondAttribute="bottom" constant="12" id="6sZ-0T-YNA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yDA-oz-nhS" secondAttribute="bottom" id="QXG-SU-y7p"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yDA-oz-nhS" secondAttribute="trailing" id="QXm-n6-yFq"/>
+                <constraint firstItem="V2T-JC-VgA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="SKq-pp-Jbo"/>
+                <constraint firstItem="V2T-JC-VgA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="k9W-Xu-z9R"/>
+                <constraint firstItem="yDA-oz-nhS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rT8-ms-5xw"/>
+            </constraints>
+            <connections>
+                <outlet property="photo" destination="yDA-oz-nhS" id="EXd-wV-dDi"/>
+            </connections>
+            <point key="canvasLocation" x="15" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow.backward" catalog="system" width="128" height="95"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
